@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PopOver" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXR-Jr-D8a">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="PopCase" id="CGY-CE-VDR">
+                                        <barButtonItem key="rightBarButtonItem" title="Pop" id="vOL-gv-e5i">
+                                            <connections>
+                                                <segue destination="DYn-VF-Wft" kind="popoverPresentation" identifier="pop" popoverAnchorBarButtonItem="vOL-gv-e5i" id="Nfy-cJ-Pmh">
+                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                </segue>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kXR-Jr-D8a" secondAttribute="trailing" id="GU6-sN-QYF"/>
+                            <constraint firstItem="kXR-Jr-D8a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PPE-KU-dwZ"/>
+                            <constraint firstItem="kXR-Jr-D8a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="vEY-Ze-Cm4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="423"/>
+        </scene>
+        <!--Pop Text View Controller-->
+        <scene sceneID="Cnu-7C-79k">
+            <objects>
+                <viewController id="DYn-VF-Wft" customClass="PopTextViewController" customModule="PopOver" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wmz-SN-Sge"/>
+                        <viewControllerLayoutGuide type="bottom" id="fDm-7m-A6M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qf2-eR-V8v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KxX-jz-Uo5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KxX-jz-Uo5" secondAttribute="trailing" id="1Hz-W9-ekU"/>
+                            <constraint firstItem="KxX-jz-Uo5" firstAttribute="leading" secondItem="qf2-eR-V8v" secondAttribute="leading" id="EEe-wR-gvK"/>
+                            <constraint firstItem="KxX-jz-Uo5" firstAttribute="bottom" secondItem="fDm-7m-A6M" secondAttribute="top" id="ZjQ-wf-AwH"/>
+                            <constraint firstItem="KxX-jz-Uo5" firstAttribute="top" secondItem="qf2-eR-V8v" secondAttribute="top" id="vKj-MO-7Ju"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textview" destination="KxX-jz-Uo5" id="9Dv-rG-uF9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwX-K0-2LM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="409"/>
+        </scene>
+    </scenes>
+</document>
